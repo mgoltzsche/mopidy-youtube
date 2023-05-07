@@ -410,7 +410,7 @@ class Video(Entry):
                 )
                 self._audio_url.set(fileUri)
 
-            if d["status"] == "downloading":
+            """ if d["status"] == "downloading":
                 p = d["_percent_str"]
                 p = float(p.replace("%", ""))
                 logger.debug(f"percent cached: {p}%, {os.path.basename(d['filename'])}")
@@ -436,7 +436,7 @@ class Video(Entry):
                         f"expected length of {os.path.basename(d['filename'])}: "
                         f"{self.total_bytes}"
                     )
-                    self._audio_url.set(httpUri)
+                    self._audio_url.set(httpUri) """
 
         requiresUrl = self._add_futures([self], ["audio_url"])
         if requiresUrl:
